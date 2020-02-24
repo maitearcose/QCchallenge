@@ -1,13 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
 
 import numpy as np
 
 
-# In[39]:
 
 
 def u(alpha, beta, gamma, delta):
@@ -25,20 +22,15 @@ def u(alpha, beta, gamma, delta):
         
 
 
-# In[40]:
-
 
 print(u(0,1,0,-1))
 
-
-# In[41]:
 
 
 h = np.array([[1/np.sqrt(2), 1/np.sqrt(2)],
             [1/np.sqrt(2), -1/np.sqrt(2)]])
 
 
-# In[100]:
 
 
 def f(alpha,beta, gamma, delta):
@@ -46,13 +38,10 @@ def f(alpha,beta, gamma, delta):
     return(np.linalg.norm(p))
 
 
-# In[107]:
 
 
 epsilon = 0.0000001
 
-
-# In[103]:
 
 
 def grad (alpha,beta, gamma, delta):
@@ -63,13 +52,10 @@ def grad (alpha,beta, gamma, delta):
     return(1/epsilon*np.array([a,b,c,d]))
 
 
-# In[110]:
-
 
 print(grad(1,1,1,1))
 
 
-# In[129]:
 
 
 wow= np.array([1.0,1.0,1.0,1.0])
@@ -88,25 +74,17 @@ print(f(*wow))
 
 
 
-# In[130]:
-
-
 print(u(*wow))
 
-
-# In[131]:
 
 
 print(h)
 
 
-# In[132]:
 
 
 print(wow)
 
-
-# In[159]:
 
 
 alpha = wow[0]
@@ -117,13 +95,9 @@ import qiskit as ma
 simulator = Aer.get_backend('qasm_simulator')
 
 
-# In[160]:
 
 
 from qiskit.tools.visualization import plot_bloch_multivector
-
-
-# In[163]:
 
 
 circuit= ma.QuantumCircuit(2,2)
@@ -141,25 +115,12 @@ print("\nTotal count for 00 and 11 are:",counts)
 circuit.draw()
 
 
-# In[ ]:
 
 
 #to get - instead of + you do an x gate at the beginning on the first qubit. 
 
 
-# In[ ]:
 
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
 
 
 
